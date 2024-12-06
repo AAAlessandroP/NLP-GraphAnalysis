@@ -1,0 +1,44 @@
+Progetto data analytics
+
+----------------------------------------------------------------------------
+Task principale: relazione tra importanza delle entità e sentiment associato
+----------------------------------------------------------------------------
+L'obiettivo e' la ricerca di eventuali relazioni tra l'importanza delle entità citate nei tweets e il sentiment a loro associato. Si segue la seguente metodologia:
+	
+1) Estrazione delle citazioni, degli hashtag e delle entità dai tweet;
+2) Creazione di un grafo delle citazioni e assegnazione di un coefficiente di importanza a ogni utente (basato su followers + misure di centralità sul grafo);
+	
+3) Creazione di un grafo bipartito (utente) -[cita]-> (entità) a partire dal grafo delle citazioni e assegnazione di un coefficiente di importanza a ogni entità, dove l'importanza è data dalla somma del peso degli archi entranti per l'importanza dell'utente che fa la citazione;
+
+3) Stesura della classifica delle entità più importanti
+
+4) Calcolo del sentiment associato alle entità
+
+5) Analisi della relazione tra sentiment e importanza
+
+Se non si ottengono risultati rilevanti, fare community detection e ripetere per le comunità più importanti
+
+---------------------------------------------------------------------------------------------------------
+Task secondario: sentiment associato ai nodi pozzo (utenti di twitter citati ma non presenti nel dataset)
+---------------------------------------------------------------------------------------------------------
+L'obiettivo è l'individuazione del sentiment relativo ai nodi pozzo, per poi stilare una classifica degli utenti in base al sentiment che provocano.
+
+Per far ciò, si calcola il sentiment nei tweets in cui i nodi pozzo vengono citati. Una possibile estensione è considerare anche la variabile temporale: raggruppare i tweets per mese e vedere come cambia il sentiment relativo ai nodi pozzo nel corso del tempo.
+
+---------------------------------------------------------------------------------------------------------
+Task secondario: variazione del sentiment nel tempo dei nodi più importanti
+---------------------------------------------------------------------------------------------------------
+L'obiettivo è studiare la variazione del sentiment nel tempo, concentrandosi sugli utenti più importanti trovati nel task principale.
+Se si riesce a individuare un momento temporale in cui il sentiment cambia in maniera rilevante, cercare possibili eventi che abbiano provocato questo cambiamento.
+
+----------------------------------------------------------------------------
+Note:
+----------------------------------------------------------------------------
+Cercare di capire il perchè la gente si cita da sola su twitter
+La community detection non rileva clusters --> evitare se possibile
+
+
+
+
+
+
